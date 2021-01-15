@@ -1,80 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div id="app" class="container">
-
-       <!-- LOGIN FORM -->
-      <div class="container" v-if="halaman === 'login'">
-        <form class="w-25 mx-auto" style="margin-top: 100px">
-          <h1>Login Form</h1>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-      <!-- LOGIN FORM -->
-
-      <!-- REGISTER FORM -->
-    <div class="container" v-else-if="halaman === 'register'">
-      <form class="w-25 mx-auto" style="margin-top: 100px">
-        <h1>Login Form</h1>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    <!-- REGISTER FORM -->
-
-      <!-- LIST TASKS -->
-      <div class="container" style="border: 1px #333 solid; background-color: blue" v-else-if="halaman === 'task'">
-        <div class="row justify-content-center" style="height: 500px; border: 1px #333 solid">
-          <div class="col m-3" style="border: 1px red solid; background-color: white"><h1>Backlog</h1></div>
-          <div class="col m-3" style="border: 1px red solid; background-color: white"><h1>Product</h1></div>
-          <div class="col m-3" style="border: 1px red solid; background-color: white"><h1>Development</h1></div>
-          <div class="col m-3" style="border: 1px red solid; background-color: white"><h1>Done</h1></div>
-        </div>
-      </div>
-    <!-- LIST TASKS -->
-
-      <!-- WELCOME -->
-      <div class="container" v-else>
-        <div class="jumbotron text-center p-4" style="background-color: #f4eeed;">
-          <h1 class="display-4">Selamat datang di Website Kami, KANBAN</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente adipisci nobis facilis laudantium, molestias, nihil ipsum voluptatem quis id, animi sunt! Natus, quidem asperiores ab animi debitis quibusdam ipsum rem porro similique beatae temporibus officiis labore error nihil, quasi eos inventore pariatur earum. Laborum maiores ex quia eaque, ab inventore.</p>
-          <button class="btn btn-primary btn-lg" v-on:click="gantiHalaman('login')">Login</button>
-          <button class="btn btn-primary btn-lg" v-on:click="gantiHalaman('register')">Register</button>
-        </div>
-      </div>
-      <!-- WELCOME -->
-  </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Kanban App</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./src/main.js"></script>
+</body>
 </html>
